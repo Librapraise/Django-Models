@@ -9,5 +9,5 @@ class Post(models.Model):
     text = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_date = models.DateTimeField(auto_now_add= True)
-    published_date = models.DateTimeField(auto_now_add= True)
+    published_date = models.DateTimeField(default=timezone.now)
     
